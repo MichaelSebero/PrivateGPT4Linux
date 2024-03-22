@@ -4,7 +4,7 @@
 
 . Run the corresponding commands below.
 
-### Llama-CPP Version (RECOMMENDED)
+### LLaMA-CPP Version (RECOMMENDED)
 ```
 curl -LO https://raw.githubusercontent.com/MichaelSebero/PrivateGPT4Linux/main/files/installers/llama-cpp-installer.sh
 
