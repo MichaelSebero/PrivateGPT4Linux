@@ -20,7 +20,7 @@ sh ollama-installer.sh
 
 ## How to Use
 
-### Llama-CPP
+### LLaMA-CPP
 ```
 cd /home/$USER/privateGPT && PGPT_PROFILES=local make run
 ```
@@ -54,7 +54,7 @@ cd /home/$USER/privateGPT && PGPT_PROFILES=ollama make run
    
 ## How to Change the Model
 
-### Llama-CPP
+### LLaMA-CPP
 
 . Edit the section below in `settings.yaml` and `settings-local.yaml`
 
