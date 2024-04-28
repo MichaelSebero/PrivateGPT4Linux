@@ -61,7 +61,7 @@ cd /home/$USER/privateGPT && PGPT_PROFILES=ollama make run
 ```
 llamacpp:
   prompt_style: "llama2"
-  llm_hf_repo_id: TheBloke/Nous-Hermes-Llama2-GGUF | This Where it looks to find the repo.
+  llm_hf_repo_id: TheBloke/Nous-Hermes-Llama2-GGUF | This is where it looks to find the repo.
   llm_hf_model_file: nous-hermes-llama2-13b.Q5_K_S.gguf | This is where it looks to find a specific file in the repo.
 ```
 > [ prompt_style ] should be 'default', 'llama2', 'tag', 'mistral' or 'chatml'
@@ -74,7 +74,7 @@ llm:
   # Should be matching the selected model
   max_new_tokens: 4096
   context_window: 3900
-  tokenizer: NousResearch/Nous-Hermes-Llama2-13b | Change this to where the model file originates.
+  tokenizer: NousResearch/Nous-Hermes-Llama2-13b | Change this to where the model file is located.
 ```
 > You might have to modify [ max_new_tokens ] to match the model's max tokens.
 
