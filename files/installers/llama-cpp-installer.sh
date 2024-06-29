@@ -1,10 +1,20 @@
 #!/bin/bash
 
-   git clone https://github.com/imartinez/privateGPT
-   cd privateGPT
+git clone https://github.com/zylon-ai/private-gpt
+cd private-gpt
 
-   poetry install --extras "ui llms-llama-cpp embeddings-huggingface vector-stores-qdrant"
+curl https://pyenv.run | bash
+export PATH="/home/user/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 
-   PGPT_PROFILES=local make setup
-   
-   cd /home/$USER/privateGPT && PGPT_PROFILES=local make run
+pyenv install 3.11
+pyenv local 3.11
+
+curl -sSL https://install.python-poetry.org | python3.11 -
+
+poetry install --extras "ui llms-llama-cpp embeddings-huggingface vector-stores-qdrant"
+
+poetry run python scripts/setup
+
+PGPT_PROFILES=local make run
