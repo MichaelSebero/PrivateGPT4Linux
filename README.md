@@ -22,12 +22,12 @@ sh ollama-installer.sh
 
 ### LLaMA-CPP
 ```
-cd /home/$USER/privateGPT && PGPT_PROFILES=local make run
+poetry env use 3.11 && cd /home/$USER/private-gpt && PGPT_PROFILES=local make run
 ```
 
 ### Ollama
 ```
-cd /home/$USER/privateGPT && PGPT_PROFILES=ollama make run
+cd /home/$USER/private-gpt && PGPT_PROFILES=ollama make run
 ```
 
 - Enter `localhost:8001` in your browser, despite it being ran in your browser privateGPT is offline.
@@ -83,7 +83,7 @@ llm:
 . Run the commands below. 
 
 ```
-/home/$USER/private-gpt && PGPT_PROFILES=local make setup
+poetry env use 3.11 && cd /home/$USER/private-gpt && PGPT_PROFILES=local make run
 ```
 
 ## Documentation 
