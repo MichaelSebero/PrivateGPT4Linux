@@ -4,30 +4,15 @@
 
 . Run the corresponding commands below.
 
-### LLaMA-CPP Version (RECOMMENDED)
 ```
 curl -LO https://raw.githubusercontent.com/MichaelSebero/PrivateGPT4Linux/main/files/installers/llama-cpp-installer.sh
 
 sh llama-cpp-installer.sh
 ```
 
-### Ollama Version
-```
-curl -LO https://raw.githubusercontent.com/MichaelSebero/PrivateGPT4Linux/main/files/installers/ollama-installer.sh
-
-sh ollama-installer.sh
-```
-
 ## How to Use
-
-### LLaMA-CPP
 ```
-poetry env use 3.11 && cd /home/$USER/private-gpt && PGPT_PROFILES=local make run
-```
-
-### Ollama
-```
-cd /home/$USER/private-gpt && PGPT_PROFILES=ollama make run
+cd /home/$USER/private-gpt && poetry env use /home/user/.pyenv/versions/3.11.9/bin/python3.11 && PGPT_PROFILES=local poetry run make run
 ```
 
 - Enter `localhost:8001` in your browser, despite it being ran in your browser privateGPT is offline.
@@ -53,8 +38,6 @@ cd /home/$USER/private-gpt && PGPT_PROFILES=ollama make run
 - `.pptx`: PowerPoint Document
    
 ## How to Change the Model
-
-### LLaMA-CPP
 
 . Edit the section below in `settings.yaml` and `settings-local.yaml`
 
