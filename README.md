@@ -2,15 +2,14 @@
 
 . Install `python-poetry` and `pyenv`
 
-. Run the corresponding commands below.
-
+### . Run the corresponding commands below.
 ```
 curl -LO https://raw.githubusercontent.com/MichaelSebero/PrivateGPT4Linux/main/files/installers/llama-cpp-installer.sh
 
 sh llama-cpp-installer.sh
 ```
 
-## How to Use
+## How to Run PrivateGPT
 ```
 cd /home/$USER/private-gpt && poetry env use /home/user/.pyenv/versions/3.11.9/bin/python3.11 && PGPT_PROFILES=local poetry run make run
 ```
