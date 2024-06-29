@@ -83,7 +83,7 @@ llm:
 . Run the commands below. 
 
 ```
-/home/$USER/privateGPT && PGPT_PROFILES=local make setup
+/home/$USER/private-gpt && PGPT_PROFILES=local make setup
 ```
 
 ## Documentation 
