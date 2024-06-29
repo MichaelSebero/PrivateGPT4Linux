@@ -9,7 +9,7 @@ curl -LO https://raw.githubusercontent.com/MichaelSebero/PrivateGPT4Linux/main/f
 sh llama-cpp-installer.sh
 ```
 
-## How to Run PrivateGPT
+## How to Launch PrivateGPT
 ```
 cd /home/$USER/private-gpt && poetry env use /home/user/.pyenv/versions/3.11.9/bin/python3.11 && PGPT_PROFILES=local poetry run make run
 ```
