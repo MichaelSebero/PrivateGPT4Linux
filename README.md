@@ -42,11 +42,9 @@ cd /home/$USER/private-gpt && poetry env use /home/user/.pyenv/versions/3.11.9/b
 
 ```
 llamacpp:
-  prompt_style: "llama2"
-  llm_hf_repo_id: TheBloke/Nous-Hermes-Llama2-GGUF | This is where it looks to find the repo.
-  llm_hf_model_file: nous-hermes-llama2-13b.Q5_K_S.gguf | This is where it looks to find a specific file in the repo.
+  llm_hf_repo_id: Repo-User/Language-Model-GGUF | This is where it looks to find the repo.
+  llm_hf_model_file: language-model-file.gguf | This is where it looks to find a specific file in the repo.
 ```
-> [ prompt_style ] should be 'default', 'llama2', 'tag', 'mistral' or 'chatml'
 
 . Change the tokenizer section in `settings-local.yaml`
 
@@ -54,19 +52,18 @@ llamacpp:
 llm:
   mode: llamacpp
   # Should be matching the selected model
-  max_new_tokens: 4096
+  max_new_tokens: 512
   context_window: 3900
-  tokenizer: NousResearch/Nous-Hermes-Llama2-13b | Change this to where the model file is located.
+  tokenizer: Repo-User/Language-Model | Change this to where the model file is located.
+  prompt_style: "default" | Change this if required.
 ```
 > You might have to modify [ max_new_tokens ] to match the model's max tokens.
 
-. Delete the contents of `/home/$USER/privateGPT/models`
+> [ prompt_style ] should be 'default', 'llama2', 'tag', 'mistral' or 'chatml'
 
-. Run the commands below. 
+. Delete the contents of `/home/$USER/private-gpt/models`
 
-```
-poetry env use 3.11 && cd /home/$USER/private-gpt && PGPT_PROFILES=local make run
-```
+. Launch PrivateGPT.
 
 ## Documentation 
 
